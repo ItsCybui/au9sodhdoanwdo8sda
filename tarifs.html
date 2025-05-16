@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Tarifs - Alpine'RGX</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="AlpineLogo" class="logo-img">
+                <span>Alpine'RGX</span>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="realisations.html" class="nav-link">Réalisations</a></li>
+                    <li class="nav-item"><a href="tarifs.html" class="nav-link active">Tarifs</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header bg-primary">
+        <div class="container">
+            <h1 class="page-title">Nos Tarifs Transparents</h1>
+            <p class="page-subtitle">Pas de mauvaises surprises, tout est indiqué clairement</p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section">
+        <div class="container">
+            <div class="pricing-switch">
+                <span>Particuliers</span>
+                <label class="switch">
+                    <input type="checkbox" id="professionalToggle">
+                    <span class="slider"></span>
+                </label>
+                <span>Professionnels</span>
+            </div>
+
+            <!-- Pricing Tables -->
+            <div class="pricing-tables">
+                <!-- Tableau Particuliers -->
+                <div class="pricing-table" id="particuliers">
+                    <div class="table-header">
+                        <i class="fas fa-home"></i>
+                        <h2>Pour les particuliers</h2>
+                    </div>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Description</th>
+                                    <th>Prix</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Nettoyage complet</td>
+                                    <td>Dépoussiérage + pâte thermique</td>
+                                    <td>59€</td>
+                                </tr>
+                                <tr class="popular">
+                                    <td>Montage PC</td>
+                                    <td>Assemblage + câble management</td>
+                                    <td>99€</td>
+                                </tr>
+                                <tr>
+                                    <td>Installation SSD</td>
+                                    <td>Avec migration du système</td>
+                                    <td>79€</td>
+                                </tr>
+                                <tr>
+                                    <td>Changement carte graphique</td>
+                                    <td>Avec optimisation drivers</td>
+                                    <td>49€</td>
+                                </tr>
+                                <tr>
+                                    <td>Diagnostic complet</td>
+                                    <td>Avec rapport détaillé</td>
+                                    <td>29€</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="table-note">* Prix main d'œuvre uniquement, hors coût des pièces</p>
+                </div>
+
+                <!-- Tableau Professionnels (caché par défaut) -->
+                <div class="pricing-table" id="professionnels" style="display:none;">
+                    <div class="table-header">
+                        <i class="fas fa-briefcase"></i>
+                        <h2>Pour les professionnels</h2>
+                    </div>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Description</th>
+                                    <th>Prix</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Maintenance annuelle</td>
+                                    <td>Forfait 10 machines</td>
+                                    <td>490€</td>
+                                </tr>
+                                <tr class="popular">
+                                    <td>Dépannage urgent</td>
+                                    <td>Intervention sous 4h</td>
+                                    <td>149€/h</td>
+                                </tr>
+                                <tr>
+                                    <td>Migration parc informatique</td>
+                                    <td>Jusqu'à 20 postes</td>
+                                    <td>990€</td>
+                                </tr>
+                                <tr>
+                                    <td>Maintenance préventive</td>
+                                    <td>Par poste/mois</td>
+                                    <td>15€</td>
+                                </tr>
+                                <tr>
+                                    <td>Support à distance</td>
+                                    <td>Forfait 10h/mois</td>
+                                    <td>299€</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="table-note">* Devis personnalisé pour les entreprises de +20 postes</p>
+                </div>
+            </div>
+
+            <!-- Calculateur de budget -->
+            <div class="calculator">
+                <div class="calculator-header">
+                    <i class="fas fa-calculator"></i>
+                    <h2>Calculateur de budget</h2>
+                </div>
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="serviceSelect">Service :</label>
+                        <select id="serviceSelect" class="form-control">
+                            <option value="">-- Sélectionnez --</option>
+                            <option value="59">Nettoyage complet (59€)</option>
+                            <option value="99">Montage PC (99€)</option>
+                            <option value="79">Installation SSD (79€)</option>
+                            <option value="49">Changement carte graphique (49€)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="componentCost">Coût des composants (€) :</label>
+                        <input type="number" id="componentCost" min="0" value="0" class="form-control">
+                    </div>
+                    
+                    <button id="calculateBtn" class="btn btn-primary">
+                        Calculer le total
+                    </button>
+                    
+                    <div class="calculator-result" id="calculatorResult" style="display: none;">
+                        <h3>Estimation totale : <span id="totalAmount">0€</span></h3>
+                        <p class="result-note">(Main d'œuvre + composants)</p>
+                        <a href="contact.html" class="btn btn-outline btn-sm">
+                            <i class="fas fa-envelope"></i> Demander un devis
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section bg-secondary">
+        <div class="container">
+            <div class="cta-content">
+                <h3 class="cta-title">Un projet spécifique ?</h3>
+                <p class="cta-text">Contactez-nous pour un devis personnalisé adapté à vos besoins</p>
+                <a href="contact.html" class="btn btn-light btn-lg">
+                    <i class="fas fa-file-alt"></i> Demander un devis
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-tools"></i> Alpine'RGX
+                    </div>
+                    <p class="footer-about">Experts en réparation et montage PC depuis 2015</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Liens utiles</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html" class="footer-link">Nos services</a></li>
+                        <li><a href="tarifs.html" class="footer-link">Tarifs</a></li>
+                        <li><a href="realisations.html" class="footer-link">Réalisations</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-contact">
+                        <li class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>12 Rue Tech, 75015 Paris</span>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>01 23 45 67 89</span>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@Alpine'RGX.fr</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 Alpine'RGX - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

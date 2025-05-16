@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Alpine'RGX</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="AlpineLogo" class="logo-img">
+                <span>Alpine'RGX</span>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="realisations.html" class="nav-link">Réalisations</a></li>
+                    <li class="nav-item"><a href="tarifs.html" class="nav-link">Tarifs</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Contact Header -->
+    <section class="page-header bg-primary">
+        <div class="container">
+            <h1 class="page-title">Contactez-nous</h1>
+            <p class="page-subtitle">Une question ? Un projet ? Notre équipe vous répond sous 24h</p>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-methods-grid">
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 class="method-title">Téléphone</h3>
+                    <p class="method-info">01 23 45 67 89</p>
+                    <p class="method-hours">Lun-Sam : 9h-19h</p>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="method-title">Boutique</h3>
+                    <p class="method-info">12 Rue Tech, 75015 Paris</p>
+                    <p class="method-hours">Sur rendez-vous</p>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                                        <h3 class="method-title">Email</h3>
+                    <p class="method-info">contact@Alpine'RGX.fr</p>
+                    <p class="method-hours">Réponse sous 24h</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="contact-form-container">
+                <div class="form-header">
+                    <i class="fas fa-paper-plane"></i>
+                    <h2 class="section-title">Formulaire de contact</h2>
+                    <p class="form-subtitle">Remplissez ce formulaire et nous vous répondrons rapidement</p>
+                </div>
+                
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nom complet *</label>
+                            <input type="text" id="name" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" id="email" class="form-input" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Téléphone</label>
+                        <input type="tel" id="phone" class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Sujet *</label>
+                        <select id="subject" class="form-input" required>
+                            <option value="">-- Sélectionnez --</option>
+                            <option value="Devis">Demande de devis</option>
+                            <option value="Reparation">Problème technique</option>
+                            <option value="Rendez-vous">Prise de rendez-vous</option>
+                            <option value="Autre">Autre demande</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea id="message" rows="5" class="form-textarea" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="file" class="form-label">Pièce jointe (photos du PC)</label>
+                        <input type="file" id="file" accept="image/*" class="form-file">
+                    </div>
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-paper-plane"></i> Envoyer le message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section">
+        <div class="container">
+            <div class="map-header">
+                <i class="fas fa-map-marked-alt"></i>
+                <h2 class="section-title">Nous trouver</h2>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d2.292292615509614!3d48.85837007928746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1623251234567!5m2!1sfr!2sfr" 
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+            <div class="map-notes">
+                <div class="note">
+                    <i class="fas fa-subway"></i>
+                    <p>Métro: Ligne 6 - Station Dupleix</p>
+                </div>
+                <div class="note">
+                    <i class="fas fa-parking"></i>
+                    <p>Parking public à 100m</p>
+                </div>
+                <div class="note">
+                    <i class="fas fa-wheelchair"></i>
+                    <p>Accessible aux personnes à mobilité réduite</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Questions fréquentes</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Quels sont vos horaires d'ouverture ?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Notre boutique est ouverte du lundi au samedi de 9h à 19h sans interruption. Les rendez-vous se prennent par téléphone ou via notre formulaire de contact.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Faut-il prendre rendez-vous ?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Pour un dépannage urgent, nous acceptons les clients sans rendez-vous dans la limite des disponibilités. Pour un montage PC ou une configuration sur mesure, nous recommandons fortement de prendre rendez-vous.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Acceptez-vous les paiements en plusieurs fois ?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, pour les montages PC à partir de 800€, nous proposons des solutions de paiement en 2 ou 3 fois sans frais. Des solutions de financement plus longues sont également possibles avec nos partenaires bancaires.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-tools"></i> Alpine'RGX
+                    </div>
+                    <p class="footer-about">Experts en réparation et montage PC depuis 2015</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Liens utiles</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html" class="footer-link">Nos services</a></li>
+                        <li><a href="tarifs.html" class="footer-link">Tarifs</a></li>
+                        <li><a href="realisations.html" class="footer-link">Réalisations</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-contact">
+                        <li class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>12 Rue Tech, 75015 Paris</span>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>01 23 45 67 89</span>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@Alpine'RGX.fr</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 Alpine'RGX - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
