@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://alpine-rgx.shop/</loc>
+        <loc>https://alpine-rgx.shop/</loc>
         <lastmod>2025-05-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://alpine-rgx.shop/index.html</loc>
+        <loc>https://alpine-rgx.shop/index.html</loc>
         <lastmod>2025-05-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
         <url>
-        <loc>http://alpine-rgx.shop/services.html</loc>
+        <loc>https://alpine-rgx.shop/services.html</loc>
         <lastmod>2025-05-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
         <url>
-        <loc>http://alpine-rgx.shop/tarifs.html</loc>
+        <loc>https://alpine-rgx.shop/tarifs.html</loc>
         <lastmod>2025-05-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
         <url>
-        <loc>http://alpine-rgx.shop/realisations.html</loc>
+        <loc>https://alpine-rgx.shop/realisations.html</loc>
         <lastmod>2025-05-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>http://alpine-rgx.shop/contact.html</loc>
+        <loc>https://alpine-rgx.shop/contact.html</loc>
         <lastmod>2025-05-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
