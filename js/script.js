@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const componentsCost = parseFloat(document.getElementById('componentCost').value) || 0;
       const total = serviceCost + componentsCost;
       
-      document.getElementById('totalAmount').textContent = total + '€';
+      document.getElementById('totalAmount').textContent = total + 'CHF';
       document.getElementById('calculatorResult').style.display = 'block';
     });
   }
