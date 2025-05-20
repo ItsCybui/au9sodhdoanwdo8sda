@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Alpine'RGX</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- Header -->
     <header class="main-header">
@@ -51,7 +55,7 @@
                     <p class="method-info">+41 79 192 11 62</p>
                     <p class="method-hours">Lun-Sam : 10h-18h</p>
                 </div>
-                
+
                 <div class="contact-method">
                     <div class="method-icon">
                         <i class="fas fa-map-marker-alt"></i>
@@ -60,12 +64,12 @@
                     <p class="method-info">Canton de Vaud</p>
                     <p class="method-hours">Sur rendez-vous</p>
                 </div>
-                
+
                 <div class="contact-method">
                     <div class="method-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
-                                        <h3 class="method-title">Email</h3>
+                    <h3 class="method-title">Email</h3>
                     <p class="method-info">alpine.rgx@gmail.com</p>
                     <p class="method-hours">Réponse sous 24h</p>
                 </div>
@@ -82,46 +86,51 @@
                     <h2 class="section-title">Formulaire de contact</h2>
                     <p class="form-subtitle">Remplissez ce formulaire et nous vous répondrons rapidement</p>
                 </div>
-                
-                <form id="contactForm" class="contact-form">
+
+                <form id="contactForm" class="contact-form" action="https://formspree.io/f/xvgallbr" method="POST" enctype="multipart/form-data">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name" class="form-label">Nom complet *</label>
-                            <input type="text" id="name" class="form-input" required>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                            <div id="name-error" class="error-message">Veuillez entrer votre nom complet</div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="email" class="form-label">Email *</label>
-                            <input type="email" id="email" class="form-input" required>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                            <div id="email-error" class="error-message">Veuillez entrer une adresse email valide</div>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="phone" class="form-label">Téléphone</label>
-                        <input type="tel" id="phone" class="form-input">
+                        <input type="tel" id="phone" name="phone" class="form-input">
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="subject" class="form-label">Sujet *</label>
-                        <select id="subject" class="form-input" required>
+                        <select id="subject" name="subject" class="form-input" required>
                             <option value="">-- Sélectionnez --</option>
                             <option value="Devis">Demande de devis</option>
                             <option value="Reparation">Problème technique</option>
                             <option value="Rendez-vous">Prise de rendez-vous</option>
                             <option value="Autre">Autre demande</option>
                         </select>
+                        <div id="subject-error" class="error-message">Veuillez sélectionner un sujet</div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="message" class="form-label">Message *</label>
-                        <textarea id="message" rows="5" class="form-textarea" required></textarea>
+                        <textarea id="message" name="message" rows="5" class="form-textarea" required></textarea>
+                        <div id="message-error" class="error-message">Veuillez entrer votre message</div>
                     </div>
-                    
+
                     <div class="form-group">
-                        <label for="file" class="form-label">Pièce jointe (photos du PC, autre)</label>
-                        <input type="file" id="file" accept="image/*" class="form-file">
+                        <label for="file" class="form-label">Pièce jointe (max 10MB - images, PDF)</label>
+                        <input type="file" id="file" name="file" accept="image/*,.pdf" class="form-file">
+                        <div id="file-error" class="error-message" style="display: none;"></div>
                     </div>
-                    
+
                     <div class="form-submit">
                         <button type="submit" class="btn btn-primary btn-lg">
                             <i class="fas fa-paper-plane"></i> Envoyer le message
@@ -166,7 +175,7 @@
     <section class="section bg-light">
         <div class="container">
             <h2 class="section-title">Questions fréquentes</h2>
-            
+
             <div class="faq-container">
                 <div class="faq-item">
                     <button class="faq-question">
@@ -174,27 +183,30 @@
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Ouvert du lundi au samedi de 10h à 18h. Les rendez-vous se prennent par téléphone ou via notre formulaire de contact.</p>
+                        <p>Ouvert du lundi au samedi de 10h à 18h. Les rendez-vous se prennent par téléphone ou via
+                            notre formulaire de contact.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
                     <button class="faq-question">
                         Faut-il prendre rendez-vous ?
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Pour un montage PC ou une configuration sur mesure, nous recommandons fortement de prendre rendez-vous.</p>
+                        <p>Pour un montage PC ou une configuration sur mesure, nous recommandons fortement de prendre
+                            rendez-vous.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
                     <button class="faq-question">
                         Acceptez-vous les paiements en plusieurs fois ?
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Oui, pour les montages PC à partir de 1200CHF, nous proposons des solutions de paiement en 2 fois sans frais.</p>
+                        <p>Oui, pour les montages PC à partir de 1200CHF, nous proposons des solutions de paiement en 2
+                            fois sans frais.</p>
                     </div>
                 </div>
             </div>
@@ -211,10 +223,11 @@
                     </div>
                     <p class="footer-about">Nouvelle entreprise spécialisée dans les configurations PC depuis 2025</p>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/alpine.rgx/" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/alpine.rgx/" class="social-link"><i
+                                class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-col">
                     <h4 class="footer-title">Liens utiles</h4>
                     <ul class="footer-links">
@@ -224,7 +237,7 @@
                         <li><a href="contact.html" class="footer-link">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-col">
                     <h4 class="footer-title">Contact</h4>
                     <ul class="footer-contact">
@@ -239,7 +252,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p class="copyright">&copy; 2025 Alpine'RGX - Tous droits réservés</p>
             </div>
@@ -248,4 +261,5 @@
 
     <script src="js/script.js"></script>
 </body>
+
 </html>
