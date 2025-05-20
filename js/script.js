@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ========== CONTACT FORM VALIDATION ==========
- const contactForm = document.getElementById('contactForm');
+  const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', async function (e) {
       e.preventDefault();
