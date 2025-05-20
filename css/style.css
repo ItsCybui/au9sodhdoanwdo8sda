@@ -1003,6 +1003,17 @@ tr:hover {
   color: var(--primary);
 }
 
+/* reCAPTCHA Styling */
+.g-recaptcha {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.g-recaptcha > div {
+    margin: 0 auto;
+}
+
 /* ========== FAQ ========== */
 .faq-container {
   max-width: 800px;

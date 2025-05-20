@@ -133,26 +133,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ========== CONTACT FORM VALIDATION ==========
-  const contactForm = document.getElementById('contactForm');
+ const contactForm = document.getElementById('contactForm');
   if (contactForm) {
-    // Fonction pour valider les fichiers
-    function validateFile(file) {
-      if (!file) return null;
-
-      const validTypes = ['image/jpeg', 'image/png', 'image/gif', 'application/pdf'];
-      const maxSize = 10 * 1024 * 1024; // 10MB
-
-      if (!validTypes.includes(file.type)) {
-        return "Seuls les JPG, PNG, GIF et PDF sont acceptés";
-      }
-
-      if (file.size > maxSize) {
-        return "Le fichier est trop lourd (max 10MB)";
-      }
-
-      return null;
-    }
-
     contactForm.addEventListener('submit', async function (e) {
       e.preventDefault();
 
@@ -164,6 +146,17 @@ document.addEventListener('DOMContentLoaded', function () {
         msg.style.display = 'none';
       });
 
+      // Vérification reCAPTCHA
+      let isValid = true;
+      const recaptchaResponse = grecaptcha.getResponse();
+      
+      if (recaptchaResponse.length === 0) {
+        document.getElementById('recaptcha-error').style.display = 'block';
+        isValid = false;
+      } else {
+        document.getElementById('recaptcha-error').style.display = 'none';
+      }
+
       // Get values
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
@@ -171,8 +164,6 @@ document.addEventListener('DOMContentLoaded', function () {
       const message = document.getElementById('message').value.trim();
       const fileInput = document.getElementById('file');
       const fileError = document.getElementById('file-error');
-
-      let isValid = true;
 
       // Validation simple
       if (!name) {
@@ -224,6 +215,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
       try {
         const formData = new FormData(this);
+        formData.append('g-recaptcha-response', recaptchaResponse);
+
         const response = await fetch(this.action, {
           method: 'POST',
           body: formData,
@@ -243,6 +236,7 @@ document.addEventListener('DOMContentLoaded', function () {
           messageDiv.textContent = 'Message envoyé avec succès !';
           messageDiv.style.color = 'var(--success)';
           this.reset();
+          grecaptcha.reset(); // Réinitialise le CAPTCHA après envoi réussi
         } else {
           const error = await response.json();
           throw new Error(error.error || "Erreur lors de l'envoi");
@@ -265,6 +259,24 @@ document.addEventListener('DOMContentLoaded', function () {
         submitButton.innerHTML = originalText;
       }
     });
+
+    // Fonction pour valider les fichiers
+    function validateFile(file) {
+      if (!file) return null;
+
+      const validTypes = ['image/jpeg', 'image/png', 'image/gif', 'application/pdf'];
+      const maxSize = 10 * 1024 * 1024; // 10MB
+
+      if (!validTypes.includes(file.type)) {
+        return "Seuls les JPG, PNG, GIF et PDF sont acceptés";
+      }
+
+      if (file.size > maxSize) {
+        return "Le fichier est trop lourd (max 10MB)";
+      }
+
+      return null;
+    }
 
     // Clear errors when typing
     document.getElementById('name').addEventListener('input', clearError);
